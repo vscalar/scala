@@ -5395,3 +5395,29 @@ SLF4J(I): Actual provider is of type [scribe.slf4j.ScribeServiceProvider@5cbd1f2
 ∞Ê∞Ì: Unmatched cancel notification for request id 12
 2024.10.05 16:55:35 INFO  no build target found for C:\Users\user\OneDrive\πŸ≈¡ »≠∏È\scala\vae\src\main\scala\kuplrg\Implementation.scala. Using presentation compiler with project's scala-library version: 3.3.3
 2024.10.05 16:55:37 INFO  no build target found for C:\Users\user\OneDrive\πŸ≈¡ »≠∏È\scala\vae\src\main\scala\kuplrg\Implementation.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.10.05 16:56:53 INFO  Shutting down server
+2024.10.05 16:56:53 INFO  shutting down Metals
+2024.10.05 16:56:53 INFO  Exiting server
+2024.10.05 16:56:53 ERROR Unexpected error initializing server: 
+org.eclipse.lsp4j.jsonrpc.ResponseErrorException: Request window/showMessageRequest failed with message: Canceled
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.handleResponse(RemoteEndpoint.java:220)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.consume(RemoteEndpoint.java:204)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.handleMessage(StreamMessageProducer.java:185)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.listen(StreamMessageProducer.java:97)
+	at org.eclipse.lsp4j.jsonrpc.json.ConcurrentMessageProcessor.run(ConcurrentMessageProcessor.java:114)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.lang.Thread.run(Thread.java:833)
+
+2024.10.05 16:57:29 INFO  Started: Metals version 1.3.5 in folders 'C:\Users\user\OneDrive\πŸ≈¡ »≠∏È\scala' for client Visual Studio Code 1.94.0.
+SLF4J(W): Class path contains multiple SLF4J providers.
+SLF4J(W): Found provider [scribe.slf4j.ScribeServiceProvider@5cbd1f25]
+SLF4J(W): Found provider [ch.qos.logback.classic.spi.LogbackServiceProvider@4677cfb0]
+SLF4J(W): See https://www.slf4j.org/codes.html#multiple_bindings for an explanation.
+SLF4J(I): Actual provider is of type [scribe.slf4j.ScribeServiceProvider@5cbd1f25]
+2024.10.05 16:57:30 WARN  Flyway upgrade recommended: H2 2.3.230 is newer than this version of Flyway and support has not been tested. The latest supported version of H2 is 2.2.220.
+2024.10.05 16:57:33 INFO  no build target found for C:\Users\user\OneDrive\πŸ≈¡ »≠∏È\scala\vae\src\main\scala\kuplrg\Implementation.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.10.05 16:57:58 INFO  no build target found for C:\Users\user\OneDrive\πŸ≈¡ »≠∏È\scala\vae\src\main\scala\kuplrg\Implementation.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.10.05 16:59:23 INFO  no build target found for C:\Users\user\OneDrive\πŸ≈¡ »≠∏È\scala\vae\src\main\scala\kuplrg\Implementation.scala. Using presentation compiler with project's scala-library version: 3.3.3
