@@ -7244,3 +7244,206 @@ SLF4J(W): See https://www.slf4j.org/codes.html#multiple_bindings for an explanat
 SLF4J(I): Actual provider is of type [scribe.slf4j.ScribeServiceProvider@67bce66e]
 2024.10.05 17:57:54 WARN  Flyway upgrade recommended: H2 2.3.230 is newer than this version of Flyway and support has not been tested. The latest supported version of H2 is 2.2.220.
 2024.10.05 17:57:54 INFO  no build target found for C:\Users\user\OneDrive\πŸ≈¡ »≠∏È\scala\f1vae\src\main\scala\kuplrg\Implementation.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.10.05 18:00:48 INFO  no build target found for C:\Users\user\OneDrive\πŸ≈¡ »≠∏È\scala\fvae\src\main\scala\kuplrg\FVAE.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.10.05 18:00:48 INFO  no build target found for C:\Users\user\OneDrive\πŸ≈¡ »≠∏È\scala\fvae\src\main\scala\kuplrg\FVAE.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.10.05 18:00:48 INFO  no build target found for C:\Users\user\OneDrive\πŸ≈¡ »≠∏È\scala\fvae\src\main\scala\kuplrg\Implementation.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.10.05 18:02:14 INFO  no build target found for C:\Users\user\OneDrive\πŸ≈¡ »≠∏È\scala\fvae\src\main\scala\kuplrg\Implementation.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.10.05 18:02:14 INFO  no build target found for C:\Users\user\OneDrive\πŸ≈¡ »≠∏È\scala\fvae\src\main\scala\kuplrg\Implementation.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.10.05 18:02:14 INFO  no build target found for C:\Users\user\OneDrive\πŸ≈¡ »≠∏È\scala\fvae\src\main\scala\kuplrg\Implementation.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.10.05 18:02:15 INFO  no build target found for C:\Users\user\OneDrive\πŸ≈¡ »≠∏È\scala\fvae\src\main\scala\kuplrg\Implementation.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.10.05 18:02:15 INFO  no build target found for C:\Users\user\OneDrive\πŸ≈¡ »≠∏È\scala\fvae\src\main\scala\kuplrg\Implementation.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.10.05 18:03:49 INFO  no build target found for C:\Users\user\OneDrive\πŸ≈¡ »≠∏È\scala\f1vae\src\main\scala\kuplrg\Implementation.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.10.05 18:03:49 INFO  no build target found for C:\Users\user\OneDrive\πŸ≈¡ »≠∏È\scala\f1vae\src\main\scala\kuplrg\Implementation.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.10.05 18:03:50 INFO  no build target found for C:\Users\user\OneDrive\πŸ≈¡ »≠∏È\scala\f1vae\src\main\scala\kuplrg\Implementation.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.10.05 18:03:50 INFO  no build target found for C:\Users\user\OneDrive\πŸ≈¡ »≠∏È\scala\f1vae\src\main\scala\kuplrg\Implementation.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.10.05 18:03:50 INFO  no build target found for C:\Users\user\OneDrive\πŸ≈¡ »≠∏È\scala\f1vae\src\main\scala\kuplrg\Implementation.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.10.05 18:04:31 INFO  no build target found for C:\Users\user\OneDrive\πŸ≈¡ »≠∏È\scala\f1vae\src\main\scala\kuplrg\Implementation.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.10.05 18:04:32 INFO  no build target found for C:\Users\user\OneDrive\πŸ≈¡ »≠∏È\scala\f1vae\src\main\scala\kuplrg\Implementation.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.10.05 18:04:33 INFO  no build target found for C:\Users\user\OneDrive\πŸ≈¡ »≠∏È\scala\f1vae\src\main\scala\kuplrg\Implementation.scala. Using presentation compiler with project's scala-library version: 3.3.3
+10ø˘ 05, 2024 6:04:33 ø¿»ƒ org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+∞Ê∞Ì: Unmatched cancel notification for request id 45
+2024.10.05 18:04:37 INFO  no build target found for C:\Users\user\OneDrive\πŸ≈¡ »≠∏È\scala\f1vae\src\main\scala\kuplrg\Implementation.scala. Using presentation compiler with project's scala-library version: 3.3.3
+10ø˘ 05, 2024 6:04:37 ø¿»ƒ org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+∞Ê∞Ì: Unmatched cancel notification for request id 49
+2024.10.05 18:04:38 INFO  no build target found for C:\Users\user\OneDrive\πŸ≈¡ »≠∏È\scala\f1vae\src\main\scala\kuplrg\Implementation.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.10.05 18:04:38 INFO  no build target found for C:\Users\user\OneDrive\πŸ≈¡ »≠∏È\scala\f1vae\src\main\scala\kuplrg\Implementation.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.10.05 18:04:38 INFO  no build target found for C:\Users\user\OneDrive\πŸ≈¡ »≠∏È\scala\f1vae\src\main\scala\kuplrg\Implementation.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.10.05 18:04:41 INFO  no build target found for C:\Users\user\OneDrive\πŸ≈¡ »≠∏È\scala\fvae\src\main\scala\kuplrg\Implementation.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.10.05 18:04:43 INFO  no build target found for C:\Users\user\OneDrive\πŸ≈¡ »≠∏È\scala\fvae\src\main\scala\kuplrg\Implementation.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.10.05 18:04:43 INFO  no build target found for C:\Users\user\OneDrive\πŸ≈¡ »≠∏È\scala\fvae\src\main\scala\kuplrg\Implementation.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.10.05 18:04:43 INFO  no build target found for C:\Users\user\OneDrive\πŸ≈¡ »≠∏È\scala\fvae\src\main\scala\kuplrg\Implementation.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.10.05 18:04:43 INFO  no build target found for C:\Users\user\OneDrive\πŸ≈¡ »≠∏È\scala\fvae\src\main\scala\kuplrg\Implementation.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.10.05 18:04:44 INFO  no build target found for C:\Users\user\OneDrive\πŸ≈¡ »≠∏È\scala\fvae\src\main\scala\kuplrg\Implementation.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.10.05 18:04:45 INFO  no build target found for C:\Users\user\OneDrive\πŸ≈¡ »≠∏È\scala\fvae\src\main\scala\kuplrg\Implementation.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.10.05 18:04:45 INFO  no build target found for C:\Users\user\OneDrive\πŸ≈¡ »≠∏È\scala\fvae\src\main\scala\kuplrg\Implementation.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.10.05 18:04:46 INFO  no build target found for C:\Users\user\OneDrive\πŸ≈¡ »≠∏È\scala\fvae\src\main\scala\kuplrg\Implementation.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.10.05 18:04:45 INFO  no build target found for C:\Users\user\OneDrive\πŸ≈¡ »≠∏È\scala\fvae\src\main\scala\kuplrg\Implementation.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.10.05 18:04:45 INFO  no build target found for C:\Users\user\OneDrive\πŸ≈¡ »≠∏È\scala\fvae\src\main\scala\kuplrg\Implementation.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.10.05 18:04:46 INFO  no build target found for C:\Users\user\OneDrive\πŸ≈¡ »≠∏È\scala\fvae\src\main\scala\kuplrg\Implementation.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.10.05 18:04:46 INFO  no build target found for C:\Users\user\OneDrive\πŸ≈¡ »≠∏È\scala\fvae\src\main\scala\kuplrg\Implementation.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.10.05 18:04:46 INFO  no build target found for C:\Users\user\OneDrive\πŸ≈¡ »≠∏È\scala\fvae\src\main\scala\kuplrg\Implementation.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.10.05 18:04:46 INFO  no build target found for C:\Users\user\OneDrive\πŸ≈¡ »≠∏È\scala\fvae\src\main\scala\kuplrg\Implementation.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.10.05 18:04:47 INFO  no build target found for C:\Users\user\OneDrive\πŸ≈¡ »≠∏È\scala\fvae\src\main\scala\kuplrg\Implementation.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.10.05 18:04:46 INFO  no build target found for C:\Users\user\OneDrive\πŸ≈¡ »≠∏È\scala\fvae\src\main\scala\kuplrg\Implementation.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.10.05 18:04:46 INFO  no build target found for C:\Users\user\OneDrive\πŸ≈¡ »≠∏È\scala\fvae\src\main\scala\kuplrg\Implementation.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.10.05 18:04:46 INFO  no build target found for C:\Users\user\OneDrive\πŸ≈¡ »≠∏È\scala\fvae\src\main\scala\kuplrg\Implementation.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.10.05 18:04:47 INFO  no build target found for C:\Users\user\OneDrive\πŸ≈¡ »≠∏È\scala\fvae\src\main\scala\kuplrg\Implementation.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.10.05 18:04:47 INFO  no build target found for C:\Users\user\OneDrive\πŸ≈¡ »≠∏È\scala\fvae\src\main\scala\kuplrg\Implementation.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.10.05 18:04:47 INFO  no build target found for C:\Users\user\OneDrive\πŸ≈¡ »≠∏È\scala\fvae\src\main\scala\kuplrg\Implementation.scala. Using presentation compiler with project's scala-library version: 3.3.3
+10ø˘ 05, 2024 6:04:48 ø¿»ƒ org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+∞Ê∞Ì: Unmatched cancel notification for request id 117
+2024.10.05 18:04:47 INFO  no build target found for C:\Users\user\OneDrive\πŸ≈¡ »≠∏È\scala\fvae\src\main\scala\kuplrg\Implementation.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.10.05 18:04:47 INFO  no build target found for C:\Users\user\OneDrive\πŸ≈¡ »≠∏È\scala\fvae\src\main\scala\kuplrg\Implementation.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.10.05 18:04:48 INFO  no build target found for C:\Users\user\OneDrive\πŸ≈¡ »≠∏È\scala\fvae\src\main\scala\kuplrg\Implementation.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.10.05 18:04:47 INFO  no build target found for C:\Users\user\OneDrive\πŸ≈¡ »≠∏È\scala\fvae\src\main\scala\kuplrg\Implementation.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.10.05 18:04:47 INFO  no build target found for C:\Users\user\OneDrive\πŸ≈¡ »≠∏È\scala\fvae\src\main\scala\kuplrg\Implementation.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.10.05 18:04:48 INFO  no build target found for C:\Users\user\OneDrive\πŸ≈¡ »≠∏È\scala\fvae\src\main\scala\kuplrg\Implementation.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.10.05 18:04:50 INFO  no build target found for C:\Users\user\OneDrive\πŸ≈¡ »≠∏È\scala\fvae\src\main\scala\kuplrg\Implementation.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.10.05 18:04:51 INFO  no build target found for C:\Users\user\OneDrive\πŸ≈¡ »≠∏È\scala\fvae\src\main\scala\kuplrg\Implementation.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.10.05 18:04:51 INFO  no build target found for C:\Users\user\OneDrive\πŸ≈¡ »≠∏È\scala\fvae\src\main\scala\kuplrg\Implementation.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.10.05 18:04:51 INFO  no build target found for C:\Users\user\OneDrive\πŸ≈¡ »≠∏È\scala\fvae\src\main\scala\kuplrg\Implementation.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.10.05 18:04:52 INFO  no build target found for C:\Users\user\OneDrive\πŸ≈¡ »≠∏È\scala\fvae\src\main\scala\kuplrg\Implementation.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.10.05 18:04:52 INFO  no build target found for C:\Users\user\OneDrive\πŸ≈¡ »≠∏È\scala\fvae\src\main\scala\kuplrg\Implementation.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.10.05 18:04:52 INFO  no build target found for C:\Users\user\OneDrive\πŸ≈¡ »≠∏È\scala\fvae\src\main\scala\kuplrg\Implementation.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.10.05 18:04:53 INFO  no build target found for C:\Users\user\OneDrive\πŸ≈¡ »≠∏È\scala\fvae\src\main\scala\kuplrg\Implementation.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.10.05 18:04:53 INFO  no build target found for C:\Users\user\OneDrive\πŸ≈¡ »≠∏È\scala\fvae\src\main\scala\kuplrg\Implementation.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.10.05 18:04:57 INFO  no build target found for C:\Users\user\OneDrive\πŸ≈¡ »≠∏È\scala\fvae\src\main\scala\kuplrg\Implementation.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.10.05 18:04:59 INFO  no build target found for C:\Users\user\OneDrive\πŸ≈¡ »≠∏È\scala\fvae\src\main\scala\kuplrg\Implementation.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.10.05 18:04:59 INFO  no build target found for C:\Users\user\OneDrive\πŸ≈¡ »≠∏È\scala\fvae\src\main\scala\kuplrg\Implementation.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.10.05 18:04:59 INFO  no build target found for C:\Users\user\OneDrive\πŸ≈¡ »≠∏È\scala\fvae\src\main\scala\kuplrg\Implementation.scala. Using presentation compiler with project's scala-library version: 3.3.3
+10ø˘ 05, 2024 6:05:00 ø¿»ƒ scala.meta.internal.pc.CompilerAccess handleError
+Ω…∞¢: A severe compiler error occurred, full details of the error can be found in the error report C:\Users\user\OneDrive\πŸ≈¡ »≠∏È\scala\.metals\.reports\metals-full\2024-10-05\r_compiler-error_18-05-00-062.md
+2024.10.05 18:05:00 INFO  no build target found for C:\Users\user\OneDrive\πŸ≈¡ »≠∏È\scala\fvae\src\main\scala\kuplrg\Implementation.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.10.05 18:05:00 INFO  no build target found for C:\Users\user\OneDrive\πŸ≈¡ »≠∏È\scala\fvae\src\main\scala\kuplrg\Implementation.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.10.05 18:05:00 INFO  no build target found for C:\Users\user\OneDrive\πŸ≈¡ »≠∏È\scala\fvae\src\main\scala\kuplrg\Implementation.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.10.05 18:05:01 INFO  no build target found for C:\Users\user\OneDrive\πŸ≈¡ »≠∏È\scala\fvae\src\main\scala\kuplrg\Implementation.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.10.05 18:05:01 INFO  no build target found for C:\Users\user\OneDrive\πŸ≈¡ »≠∏È\scala\fvae\src\main\scala\kuplrg\Implementation.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.10.05 18:05:01 INFO  no build target found for C:\Users\user\OneDrive\πŸ≈¡ »≠∏È\scala\fvae\src\main\scala\kuplrg\Implementation.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.10.05 18:05:08 INFO  no build target found for C:\Users\user\OneDrive\πŸ≈¡ »≠∏È\scala\fvae\src\main\scala\kuplrg\Implementation.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.10.05 18:05:08 INFO  no build target found for C:\Users\user\OneDrive\πŸ≈¡ »≠∏È\scala\fvae\src\main\scala\kuplrg\Implementation.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.10.05 18:05:09 INFO  no build target found for C:\Users\user\OneDrive\πŸ≈¡ »≠∏È\scala\fvae\src\main\scala\kuplrg\Implementation.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.10.05 18:05:09 INFO  no build target found for C:\Users\user\OneDrive\πŸ≈¡ »≠∏È\scala\fvae\src\main\scala\kuplrg\Implementation.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.10.05 18:05:09 INFO  no build target found for C:\Users\user\OneDrive\πŸ≈¡ »≠∏È\scala\fvae\src\main\scala\kuplrg\Implementation.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.10.05 18:05:09 INFO  no build target found for C:\Users\user\OneDrive\πŸ≈¡ »≠∏È\scala\fvae\src\main\scala\kuplrg\Implementation.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.10.05 18:05:09 INFO  no build target found for C:\Users\user\OneDrive\πŸ≈¡ »≠∏È\scala\fvae\src\main\scala\kuplrg\Implementation.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.10.05 18:05:09 INFO  no build target found for C:\Users\user\OneDrive\πŸ≈¡ »≠∏È\scala\fvae\src\main\scala\kuplrg\Implementation.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.10.05 18:05:09 INFO  no build target found for C:\Users\user\OneDrive\πŸ≈¡ »≠∏È\scala\fvae\src\main\scala\kuplrg\Implementation.scala. Using presentation compiler with project's scala-library version: 3.3.3
+10ø˘ 05, 2024 6:05:09 ø¿»ƒ org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+∞Ê∞Ì: Unmatched cancel notification for request id 174
+10ø˘ 05, 2024 6:05:09 ø¿»ƒ org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+∞Ê∞Ì: Unmatched cancel notification for request id 176
+2024.10.05 18:05:09 INFO  no build target found for C:\Users\user\OneDrive\πŸ≈¡ »≠∏È\scala\fvae\src\main\scala\kuplrg\Implementation.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.10.05 18:05:09 INFO  no build target found for C:\Users\user\OneDrive\πŸ≈¡ »≠∏È\scala\fvae\src\main\scala\kuplrg\Implementation.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.10.05 18:05:10 INFO  no build target found for C:\Users\user\OneDrive\πŸ≈¡ »≠∏È\scala\fvae\src\main\scala\kuplrg\Implementation.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.10.05 18:05:10 INFO  no build target found for C:\Users\user\OneDrive\πŸ≈¡ »≠∏È\scala\fvae\src\main\scala\kuplrg\Implementation.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.10.05 18:05:11 INFO  no build target found for C:\Users\user\OneDrive\πŸ≈¡ »≠∏È\scala\fvae\src\main\scala\kuplrg\Implementation.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.10.05 18:05:11 INFO  no build target found for C:\Users\user\OneDrive\πŸ≈¡ »≠∏È\scala\fvae\src\main\scala\kuplrg\Implementation.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.10.05 18:05:11 INFO  no build target found for C:\Users\user\OneDrive\πŸ≈¡ »≠∏È\scala\fvae\src\main\scala\kuplrg\Implementation.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.10.05 18:05:12 INFO  no build target found for C:\Users\user\OneDrive\πŸ≈¡ »≠∏È\scala\fvae\src\main\scala\kuplrg\Implementation.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.10.05 18:05:11 INFO  no build target found for C:\Users\user\OneDrive\πŸ≈¡ »≠∏È\scala\fvae\src\main\scala\kuplrg\Implementation.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.10.05 18:05:11 INFO  no build target found for C:\Users\user\OneDrive\πŸ≈¡ »≠∏È\scala\fvae\src\main\scala\kuplrg\Implementation.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.10.05 18:05:13 INFO  no build target found for C:\Users\user\OneDrive\πŸ≈¡ »≠∏È\scala\fvae\src\main\scala\kuplrg\Implementation.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.10.05 18:05:13 INFO  no build target found for C:\Users\user\OneDrive\πŸ≈¡ »≠∏È\scala\fvae\src\main\scala\kuplrg\Implementation.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.10.05 18:05:13 INFO  no build target found for C:\Users\user\OneDrive\πŸ≈¡ »≠∏È\scala\fvae\src\main\scala\kuplrg\Implementation.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.10.05 18:05:14 INFO  no build target found for C:\Users\user\OneDrive\πŸ≈¡ »≠∏È\scala\fvae\src\main\scala\kuplrg\Implementation.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.10.05 18:05:14 INFO  no build target found for C:\Users\user\OneDrive\πŸ≈¡ »≠∏È\scala\fvae\src\main\scala\kuplrg\Implementation.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.10.05 18:05:14 INFO  no build target found for C:\Users\user\OneDrive\πŸ≈¡ »≠∏È\scala\fvae\src\main\scala\kuplrg\Implementation.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.10.05 18:05:15 INFO  no build target found for C:\Users\user\OneDrive\πŸ≈¡ »≠∏È\scala\fvae\src\main\scala\kuplrg\Implementation.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.10.05 18:05:15 INFO  no build target found for C:\Users\user\OneDrive\πŸ≈¡ »≠∏È\scala\fvae\src\main\scala\kuplrg\Implementation.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.10.05 18:05:15 INFO  no build target found for C:\Users\user\OneDrive\πŸ≈¡ »≠∏È\scala\fvae\src\main\scala\kuplrg\Implementation.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.10.05 18:05:15 INFO  no build target found for C:\Users\user\OneDrive\πŸ≈¡ »≠∏È\scala\fvae\src\main\scala\kuplrg\Implementation.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.10.05 18:05:16 INFO  no build target found for C:\Users\user\OneDrive\πŸ≈¡ »≠∏È\scala\fvae\src\main\scala\kuplrg\Implementation.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.10.05 18:05:15 INFO  no build target found for C:\Users\user\OneDrive\πŸ≈¡ »≠∏È\scala\fvae\src\main\scala\kuplrg\Implementation.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.10.05 18:05:16 INFO  no build target found for C:\Users\user\OneDrive\πŸ≈¡ »≠∏È\scala\fvae\src\main\scala\kuplrg\Implementation.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.10.05 18:05:16 INFO  no build target found for C:\Users\user\OneDrive\πŸ≈¡ »≠∏È\scala\fvae\src\main\scala\kuplrg\Implementation.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.10.05 18:05:17 INFO  no build target found for C:\Users\user\OneDrive\πŸ≈¡ »≠∏È\scala\fvae\src\main\scala\kuplrg\Implementation.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.10.05 18:05:17 INFO  no build target found for C:\Users\user\OneDrive\πŸ≈¡ »≠∏È\scala\fvae\src\main\scala\kuplrg\Implementation.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.10.05 18:05:17 INFO  no build target found for C:\Users\user\OneDrive\πŸ≈¡ »≠∏È\scala\fvae\src\main\scala\kuplrg\Implementation.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.10.05 18:05:17 INFO  no build target found for C:\Users\user\OneDrive\πŸ≈¡ »≠∏È\scala\fvae\src\main\scala\kuplrg\Implementation.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.10.05 18:05:17 INFO  no build target found for C:\Users\user\OneDrive\πŸ≈¡ »≠∏È\scala\fvae\src\main\scala\kuplrg\Implementation.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.10.05 18:05:18 INFO  no build target found for C:\Users\user\OneDrive\πŸ≈¡ »≠∏È\scala\fvae\src\main\scala\kuplrg\Implementation.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.10.05 18:05:19 INFO  no build target found for C:\Users\user\OneDrive\πŸ≈¡ »≠∏È\scala\fvae\src\main\scala\kuplrg\Implementation.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.10.05 18:05:19 INFO  no build target found for C:\Users\user\OneDrive\πŸ≈¡ »≠∏È\scala\fvae\src\main\scala\kuplrg\Implementation.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.10.05 18:05:19 INFO  no build target found for C:\Users\user\OneDrive\πŸ≈¡ »≠∏È\scala\fvae\src\main\scala\kuplrg\Implementation.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.10.05 18:05:19 INFO  no build target found for C:\Users\user\OneDrive\πŸ≈¡ »≠∏È\scala\fvae\src\main\scala\kuplrg\Implementation.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.10.05 18:05:19 INFO  no build target found for C:\Users\user\OneDrive\πŸ≈¡ »≠∏È\scala\fvae\src\main\scala\kuplrg\Implementation.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.10.05 18:05:21 INFO  no build target found for C:\Users\user\OneDrive\πŸ≈¡ »≠∏È\scala\fvae\src\main\scala\kuplrg\Implementation.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.10.05 18:05:21 INFO  no build target found for C:\Users\user\OneDrive\πŸ≈¡ »≠∏È\scala\fvae\src\main\scala\kuplrg\Implementation.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.10.05 18:05:21 INFO  no build target found for C:\Users\user\OneDrive\πŸ≈¡ »≠∏È\scala\fvae\src\main\scala\kuplrg\Implementation.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.10.05 18:05:22 INFO  no build target found for C:\Users\user\OneDrive\πŸ≈¡ »≠∏È\scala\fvae\src\main\scala\kuplrg\Implementation.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.10.05 18:05:22 INFO  no build target found for C:\Users\user\OneDrive\πŸ≈¡ »≠∏È\scala\fvae\src\main\scala\kuplrg\Implementation.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.10.05 18:05:22 INFO  no build target found for C:\Users\user\OneDrive\πŸ≈¡ »≠∏È\scala\fvae\src\main\scala\kuplrg\Implementation.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.10.05 18:05:22 INFO  no build target found for C:\Users\user\OneDrive\πŸ≈¡ »≠∏È\scala\fvae\src\main\scala\kuplrg\Implementation.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.10.05 18:05:22 INFO  no build target found for C:\Users\user\OneDrive\πŸ≈¡ »≠∏È\scala\fvae\src\main\scala\kuplrg\Implementation.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.10.05 18:05:23 INFO  no build target found for C:\Users\user\OneDrive\πŸ≈¡ »≠∏È\scala\fvae\src\main\scala\kuplrg\Implementation.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.10.05 18:05:23 INFO  no build target found for C:\Users\user\OneDrive\πŸ≈¡ »≠∏È\scala\fvae\src\main\scala\kuplrg\Implementation.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.10.05 18:05:24 INFO  no build target found for C:\Users\user\OneDrive\πŸ≈¡ »≠∏È\scala\fvae\src\main\scala\kuplrg\Implementation.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.10.05 18:05:23 INFO  no build target found for C:\Users\user\OneDrive\πŸ≈¡ »≠∏È\scala\fvae\src\main\scala\kuplrg\Implementation.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.10.05 18:05:23 INFO  no build target found for C:\Users\user\OneDrive\πŸ≈¡ »≠∏È\scala\fvae\src\main\scala\kuplrg\Implementation.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.10.05 18:05:23 INFO  no build target found for C:\Users\user\OneDrive\πŸ≈¡ »≠∏È\scala\fvae\src\main\scala\kuplrg\Implementation.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.10.05 18:05:24 INFO  no build target found for C:\Users\user\OneDrive\πŸ≈¡ »≠∏È\scala\fvae\src\main\scala\kuplrg\Implementation.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.10.05 18:05:24 INFO  no build target found for C:\Users\user\OneDrive\πŸ≈¡ »≠∏È\scala\fvae\src\main\scala\kuplrg\Implementation.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.10.05 18:05:25 INFO  no build target found for C:\Users\user\OneDrive\πŸ≈¡ »≠∏È\scala\fvae\src\main\scala\kuplrg\Implementation.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.10.05 18:05:26 INFO  no build target found for C:\Users\user\OneDrive\πŸ≈¡ »≠∏È\scala\fvae\src\main\scala\kuplrg\Implementation.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.10.05 18:05:27 INFO  no build target found for C:\Users\user\OneDrive\πŸ≈¡ »≠∏È\scala\fvae\src\main\scala\kuplrg\Implementation.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.10.05 18:05:27 INFO  no build target found for C:\Users\user\OneDrive\πŸ≈¡ »≠∏È\scala\fvae\src\main\scala\kuplrg\Implementation.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.10.05 18:05:31 INFO  no build target found for C:\Users\user\OneDrive\πŸ≈¡ »≠∏È\scala\fvae\src\main\scala\kuplrg\Implementation.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.10.05 18:05:31 INFO  no build target found for C:\Users\user\OneDrive\πŸ≈¡ »≠∏È\scala\fvae\src\main\scala\kuplrg\Implementation.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.10.05 18:05:31 INFO  no build target found for C:\Users\user\OneDrive\πŸ≈¡ »≠∏È\scala\fvae\src\main\scala\kuplrg\Implementation.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.10.05 18:05:33 INFO  no build target found for C:\Users\user\OneDrive\πŸ≈¡ »≠∏È\scala\fvae\src\main\scala\kuplrg\Implementation.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.10.05 18:05:33 INFO  no build target found for C:\Users\user\OneDrive\πŸ≈¡ »≠∏È\scala\fvae\src\main\scala\kuplrg\Implementation.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.10.05 18:05:35 INFO  no build target found for C:\Users\user\OneDrive\πŸ≈¡ »≠∏È\scala\fvae\src\main\scala\kuplrg\Implementation.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.10.05 18:05:35 INFO  no build target found for C:\Users\user\OneDrive\πŸ≈¡ »≠∏È\scala\fvae\src\main\scala\kuplrg\Implementation.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.10.05 18:05:36 INFO  no build target found for C:\Users\user\OneDrive\πŸ≈¡ »≠∏È\scala\fvae\src\main\scala\kuplrg\Implementation.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.10.05 18:05:36 INFO  no build target found for C:\Users\user\OneDrive\πŸ≈¡ »≠∏È\scala\fvae\src\main\scala\kuplrg\Implementation.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.10.05 18:05:36 INFO  no build target found for C:\Users\user\OneDrive\πŸ≈¡ »≠∏È\scala\fvae\src\main\scala\kuplrg\Implementation.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.10.05 18:05:36 INFO  no build target found for C:\Users\user\OneDrive\πŸ≈¡ »≠∏È\scala\fvae\src\main\scala\kuplrg\Implementation.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.10.05 18:05:36 INFO  no build target found for C:\Users\user\OneDrive\πŸ≈¡ »≠∏È\scala\fvae\src\main\scala\kuplrg\Implementation.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.10.05 18:05:36 INFO  no build target found for C:\Users\user\OneDrive\πŸ≈¡ »≠∏È\scala\fvae\src\main\scala\kuplrg\Implementation.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.10.05 18:05:36 INFO  no build target found for C:\Users\user\OneDrive\πŸ≈¡ »≠∏È\scala\fvae\src\main\scala\kuplrg\Implementation.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.10.05 18:05:37 INFO  no build target found for C:\Users\user\OneDrive\πŸ≈¡ »≠∏È\scala\fvae\src\main\scala\kuplrg\Implementation.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.10.05 18:05:37 INFO  no build target found for C:\Users\user\OneDrive\πŸ≈¡ »≠∏È\scala\fvae\src\main\scala\kuplrg\Implementation.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.10.05 18:05:40 INFO  no build target found for C:\Users\user\OneDrive\πŸ≈¡ »≠∏È\scala\fvae\src\main\scala\kuplrg\Implementation.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.10.05 18:05:40 INFO  no build target found for C:\Users\user\OneDrive\πŸ≈¡ »≠∏È\scala\fvae\src\main\scala\kuplrg\Implementation.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.10.05 18:05:40 INFO  no build target found for C:\Users\user\OneDrive\πŸ≈¡ »≠∏È\scala\fvae\src\main\scala\kuplrg\Implementation.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.10.05 18:05:40 INFO  no build target found for C:\Users\user\OneDrive\πŸ≈¡ »≠∏È\scala\fvae\src\main\scala\kuplrg\Implementation.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.10.05 18:05:41 INFO  no build target found for C:\Users\user\OneDrive\πŸ≈¡ »≠∏È\scala\fvae\src\main\scala\kuplrg\Implementation.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.10.05 18:05:41 INFO  no build target found for C:\Users\user\OneDrive\πŸ≈¡ »≠∏È\scala\fvae\src\main\scala\kuplrg\Implementation.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.10.05 18:06:11 INFO  no build target found for C:\Users\user\OneDrive\πŸ≈¡ »≠∏È\scala\fvae\src\main\scala\kuplrg\Implementation.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.10.05 18:06:11 INFO  no build target found for C:\Users\user\OneDrive\πŸ≈¡ »≠∏È\scala\fvae\src\main\scala\kuplrg\Implementation.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.10.05 18:06:12 INFO  no build target found for C:\Users\user\OneDrive\πŸ≈¡ »≠∏È\scala\fvae\src\main\scala\kuplrg\Implementation.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.10.05 18:06:11 INFO  no build target found for C:\Users\user\OneDrive\πŸ≈¡ »≠∏È\scala\fvae\src\main\scala\kuplrg\Implementation.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.10.05 18:06:11 INFO  no build target found for C:\Users\user\OneDrive\πŸ≈¡ »≠∏È\scala\fvae\src\main\scala\kuplrg\Implementation.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.10.05 18:06:13 INFO  no build target found for C:\Users\user\OneDrive\πŸ≈¡ »≠∏È\scala\fvae\src\main\scala\kuplrg\Implementation.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.10.05 18:06:14 INFO  no build target found for C:\Users\user\OneDrive\πŸ≈¡ »≠∏È\scala\fvae\src\main\scala\kuplrg\Implementation.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.10.05 18:06:14 INFO  no build target found for C:\Users\user\OneDrive\πŸ≈¡ »≠∏È\scala\fvae\src\main\scala\kuplrg\Implementation.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.10.05 18:06:14 INFO  no build target found for C:\Users\user\OneDrive\πŸ≈¡ »≠∏È\scala\fvae\src\main\scala\kuplrg\Implementation.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.10.05 18:06:19 INFO  no build target found for C:\Users\user\OneDrive\πŸ≈¡ »≠∏È\scala\fvae\src\main\scala\kuplrg\Implementation.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.10.05 18:06:19 INFO  no build target found for C:\Users\user\OneDrive\πŸ≈¡ »≠∏È\scala\fvae\src\main\scala\kuplrg\Implementation.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.10.05 18:06:19 INFO  no build target found for C:\Users\user\OneDrive\πŸ≈¡ »≠∏È\scala\fvae\src\main\scala\kuplrg\Implementation.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.10.05 18:06:19 INFO  no build target found for C:\Users\user\OneDrive\πŸ≈¡ »≠∏È\scala\fvae\src\main\scala\kuplrg\Implementation.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.10.05 18:06:20 INFO  no build target found for C:\Users\user\OneDrive\πŸ≈¡ »≠∏È\scala\fvae\src\main\scala\kuplrg\Implementation.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.10.05 18:06:32 INFO  no build target found for C:\Users\user\OneDrive\πŸ≈¡ »≠∏È\scala\fvae\src\main\scala\kuplrg\Implementation.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.10.05 18:06:32 INFO  no build target found for C:\Users\user\OneDrive\πŸ≈¡ »≠∏È\scala\fvae\src\main\scala\kuplrg\Implementation.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.10.05 18:06:32 INFO  no build target found for C:\Users\user\OneDrive\πŸ≈¡ »≠∏È\scala\fvae\src\main\scala\kuplrg\Implementation.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.10.05 18:06:32 INFO  no build target found for C:\Users\user\OneDrive\πŸ≈¡ »≠∏È\scala\fvae\src\main\scala\kuplrg\Implementation.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.10.05 18:06:32 INFO  no build target found for C:\Users\user\OneDrive\πŸ≈¡ »≠∏È\scala\fvae\src\main\scala\kuplrg\Implementation.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.10.05 18:07:41 INFO  no build target found for C:\Users\user\OneDrive\πŸ≈¡ »≠∏È\scala\fvae\src\main\scala\kuplrg\Implementation.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.10.05 18:07:41 WARN  no build target for: C:\Users\user\OneDrive\πŸ≈¡ »≠∏È\scala\fvae\src\main\scala\kuplrg\Implementation.scala
+2024.10.05 18:07:41 INFO  no build target found for C:\Users\user\OneDrive\πŸ≈¡ »≠∏È\scala\fvae\src\main\scala\kuplrg\Implementation.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.10.05 18:07:42 INFO  Shutting down server
+2024.10.05 18:07:42 INFO  shutting down Metals
+2024.10.05 18:07:42 INFO  Exiting server
+2024.10.05 18:07:42 ERROR Unexpected error initializing server: 
+org.eclipse.lsp4j.jsonrpc.ResponseErrorException: Request window/showMessageRequest failed with message: Canceled
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.handleResponse(RemoteEndpoint.java:220)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.consume(RemoteEndpoint.java:204)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.handleMessage(StreamMessageProducer.java:185)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.listen(StreamMessageProducer.java:97)
+	at org.eclipse.lsp4j.jsonrpc.json.ConcurrentMessageProcessor.run(ConcurrentMessageProcessor.java:114)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.lang.Thread.run(Thread.java:833)
+
