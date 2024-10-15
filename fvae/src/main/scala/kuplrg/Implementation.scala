@@ -16,7 +16,10 @@ object Implementation extends Template {
   val numAdd: BOp[Value] = numBOp(_ + _)
   val numMul: BOp[Value] = numBOp(_ * _)
   
-  def interp(expr: Expr, env: Env): Value = expr match
+  def interp(expr: Expr, env: Env): Value = 
+    //println(s"expr: $expr, env: $env");
+    //println("")    
+    expr match
     case Num(n) => NumV(n)
     case Add(l,r) => numAdd(interp(l, env), interp(r, env))
     case Mul(l,r) => numMul(interp(l, env), interp(r, env))
@@ -27,7 +30,10 @@ object Implementation extends Template {
       case _ => error("not a function")
     case Fun(p, e) => CloV(p, e, env)
 
-  def interpDS(expr: Expr, env: Env): Value = expr match
+  def interpDS(expr: Expr, env: Env): Value =
+    // println(s"expr: $expr, env: $env");
+    // println("")
+    expr match
     case Num(n) => NumV(n)
     case Add(l,r) => numAdd(interpDS(l, env), interpDS(r, env))
     case Mul(l,r) => numMul(interpDS(l, env), interpDS(r, env))

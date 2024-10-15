@@ -368,5 +368,7 @@ class Spec extends SpecBase {
   }
   test(pass, true, weight = 40)
 
-  /* Write your own tests */
+  // // /* Write your own tests */
+  // // test(eval("List(5, 7).flatMap(x => List(x, x * 2, x + 1))"), "List(5, 10, 6, 7, 14, 8)")
+  test(eval("List(6, 3, 4, 5, 0).tail.tail.head"), "4")
 }

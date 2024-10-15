@@ -1,3 +1,21 @@
+file:///C:/Users/user/OneDrive/바탕%20화면/scala/cobalt/src/main/scala/kuplrg/Implementation.scala
+### java.lang.IndexOutOfBoundsException: 0
+
+occurred in the presentation compiler.
+
+presentation compiler configuration:
+Scala version: 3.3.3
+Classpath:
+<HOME>\AppData\Local\Coursier\cache\v1\https\repo1.maven.org\maven2\org\scala-lang\scala3-library_3\3.3.3\scala3-library_3-3.3.3.jar [exists ], <HOME>\AppData\Local\Coursier\cache\v1\https\repo1.maven.org\maven2\org\scala-lang\scala-library\2.13.12\scala-library-2.13.12.jar [exists ]
+Options:
+
+
+
+action parameters:
+offset: 6491
+uri: file:///C:/Users/user/OneDrive/바탕%20화면/scala/cobalt/src/main/scala/kuplrg/Implementation.scala
+text:
+```scala
 package kuplrg
 
 object Implementation extends Template {
@@ -50,7 +68,7 @@ object Implementation extends Template {
     // modulo
     case EMod(l, r) => numMod(interp(l, env), interp(r, env))
     // equal-to
-    case EEq(l, r) => BoolV(eq(interp(l, env), interp(r, env)))
+    case EEq(l, r) => if (interp(l, env) == interp(r, env)) BoolV(true) else BoolV(false)
     // less-than
     case ELt(l, r) => numLt(interp(l, env), interp(r, env))
     // conditional
@@ -117,10 +135,11 @@ object Implementation extends Template {
     case EFun(params: List[String], body: Expr) => CloV(params, body, () => env)
     // mutually recursive function
     case ERec(defs: List[FunDef], scope: Expr) => 
-      lazy val newEnv: Env = recEnv(defs, env)
+      lazy val newEnv1: Env = recEnv(defs, env)
+      lazy val newEnv2: Env = recEnv(defs, newEnv1)
       // println()
-      // print(newEnv)
-      interp(scope, newEnv)
+      // print(newEnv2)
+      interp(scope, newEnv2)
     // function application
     case EApp(fun: Expr, args: List[Expr]) => interp(fun, env) match
       case CloV(p, b, fenv) => 
@@ -131,24 +150,23 @@ object Implementation extends Template {
       case _ => error("not a function")
       
 
-  def eq(left: Value, right: Value): Boolean = (left, right) match
-    case (NumV(n1), NumV(n2)) => if (n1 == n2) true else false
-    case (BoolV(b1), BoolV(b2)) => if (b1 == b2) true else false
-    case (NilV, NilV) => true
-    case (NilV, ConsV(_,_)) => false
-    case (ConsV(_,_), NilV) => false
-    case (ConsV(h1,t1), ConsV(h2,t2)) => eq(h1, h2) && eq(t1, t2)
-    case _ => false
+  def eq(left: Value, right: Value): Boolean = ???
 
   def map(list: Value, func: Value): Value = list match
-    case NilV => NilV
+    case ConsV(head, NilV) => ConsV(app(func, List(head)), NilV)
     case ConsV(head, tail) => ConsV(app(func, List(head)), map(tail, func))
+    case NilV => NilV
     case _ => error("not a list")
   
   def join(list: Value): Value = list match
     case NilV => NilV
-    case ConsV(NilV, tail) => join(tail)
-    case ConsV(ConsV(h1,t1), t2) => ConsV(h1, join(ConsV(t1, t2)))
+    case ConsV(head, NilV) => head
+    case ConsV(head, tail) => concatonate(head, tail)
+    case _ => error("not a list")
+  
+  def concatonate(head: Value, tail: Value): Value = head match
+    case ConsV(h, NilV) => ConsV(h, join(tail))
+    case ConsV(h, t) => ConsV(h, concatonate(t, tail))
     case _ => error("not a list")
 
   def filter(list: Value, func: Value): Value = list match
@@ -169,12 +187,12 @@ object Implementation extends Template {
     case _ => error("not a function")
   
   def recEnv(defs: List[FunDef], env: Env): Env = 
-    lazy val newEnv: Env = defs.foldLeft(env){
-      (a, b) => b match
-        case FunDef(name, params, body) =>
-          a + (name -> CloV(params, body, () => newEnv))
-    }
-    newEnv
+    lazy val newEnv = defs.foldLeft(env)(a,@@)
+    // defs match
+    // case FunDef(name, params, body) :: next =>  
+    //   lazy val newEnv: Env = env + (name -> CloV(params, body, () => newEnv))
+    //   recEnv(next, newEnv)
+    // case Nil => env
 
   def app(func: Value, args: List[Value]): Value = func match
     case CloV(p, b, fenv) if (p.length != args.length) => error("arity mismatch")
@@ -205,3 +223,25 @@ object Implementation extends Template {
   if (pred(y) == true) y * y else 0
   """
 }
+
+```
+
+
+
+#### Error stacktrace:
+
+```
+scala.collection.LinearSeqOps.apply(LinearSeq.scala:131)
+	scala.collection.LinearSeqOps.apply$(LinearSeq.scala:128)
+	scala.collection.immutable.List.apply(List.scala:79)
+	dotty.tools.dotc.util.Signatures$.countParams(Signatures.scala:501)
+	dotty.tools.dotc.util.Signatures$.applyCallInfo(Signatures.scala:186)
+	dotty.tools.dotc.util.Signatures$.computeSignatureHelp(Signatures.scala:94)
+	dotty.tools.dotc.util.Signatures$.signatureHelp(Signatures.scala:63)
+	scala.meta.internal.pc.MetalsSignatures$.signatures(MetalsSignatures.scala:17)
+	scala.meta.internal.pc.SignatureHelpProvider$.signatureHelp(SignatureHelpProvider.scala:51)
+	scala.meta.internal.pc.ScalaPresentationCompiler.signatureHelp$$anonfun$1(ScalaPresentationCompiler.scala:435)
+```
+#### Short summary: 
+
+java.lang.IndexOutOfBoundsException: 0
