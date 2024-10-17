@@ -105,10 +105,12 @@ object Implementation extends Template {
         e <- exprs
       } yield interp(e, env))
     // tuple projection
+    
     case EProj(tuple: Expr, index: Int) => tuple match
       case ETuple(exprs) => 
-        if (exprs.length - 1 < index) error("out of bounds")
+        if (exprs.length < index) error("out of bounds")
         else interp(exprs(index-1), env)
+      //case EId(x) => interp(EProj(env.getOrElse(x, error("free identifier")), index), env)
       case _ => error("not a tuple")
     
     // variable definition
