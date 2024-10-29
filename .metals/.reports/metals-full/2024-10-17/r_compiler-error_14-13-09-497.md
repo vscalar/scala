@@ -1,4 +1,4 @@
-file:///C:/Users/user/OneDrive/바탕%20화면/scala/vae/src/main/scala/kuplrg/Implementation.scala
+file:///C:/Users/user/OneDrive/바탕%20화면/scala/bfae/src/main/scala/kuplrg/Implementation.scala
 ### java.lang.IllegalArgumentException: Comparison method violates its general contract!
 
 occurred in the presentation compiler.
@@ -12,8 +12,8 @@ Options:
 
 
 action parameters:
-offset: 286
-uri: file:///C:/Users/user/OneDrive/바탕%20화면/scala/vae/src/main/scala/kuplrg/Implementation.scala
+offset: 330
+uri: file:///C:/Users/user/OneDrive/바탕%20화면/scala/bfae/src/main/scala/kuplrg/Implementation.scala
 text:
 ```scala
 package kuplrg
@@ -21,22 +21,30 @@ package kuplrg
 object Implementation extends Template {
 
   import Expr.*
+  import Value.*
 
-  def interp(expr: Expr, env: Env): Value = expr match
-    case Num(n)   => n
-    case Add(l,r) => interp(l) + interp(r)
-    case Mul(l,r) => interp(l) * interp(r)
-    case Val(x, e, b) => interp(b, en@@)
-    case Id(name) => 1
-
-  def freeIds(expr: Expr): Set[String] = ???
-
-  def bindingIds(expr: Expr): Set[String] = ???
-
-  def boundIds(expr: Expr): Set[String] = ???
-
-  def shadowedIds(expr: Expr): Set[String] = ???
-
+  def interp(expr: Expr, env: Env, mem: Mem): (Value, Mem) = expr match
+      // number
+  case Num(number: BigInt) => (NumV(number), mem)
+  // addition
+  case Add(left: Expr, right: Expr) =>
+    val (lv, lmem) = interp(left, e@@)
+  // multiplication
+  case Mul(left: Expr, right: Expr)
+  // identifier lookup
+  case Id(name: String)
+  // anonymous (lambda) function
+  case Fun(param: String, body: Expr)
+  // function application
+  case App(fun: Expr, arg: Expr)
+  // box creation
+  case NewBox(content: Expr)
+  // box content getter
+  case GetBox(box: Expr)
+  // box content setter
+  case SetBox(box: Expr, content: Expr)
+  // sequence
+  case Seq(left: Expr, right: Expr)
 }
 
 ```
