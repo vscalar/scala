@@ -1,3 +1,16 @@
+file:///C:/Users/user/OneDrive/바탕%20화면/scala/fae-cps/src/main/scala/kuplrg/Implementation.scala
+### java.lang.IndexOutOfBoundsException: -1
+
+occurred in the presentation compiler.
+
+presentation compiler configuration:
+
+
+action parameters:
+offset: 2029
+uri: file:///C:/Users/user/OneDrive/바탕%20화면/scala/fae-cps/src/main/scala/kuplrg/Implementation.scala
+text:
+```scala
 package kuplrg
 
 object Implementation extends Template {
@@ -51,11 +64,27 @@ object Implementation extends Template {
       case Fun(param: String, body: Expr) => (k, CloV(param, body, env) :: s)
       case App(fun: Expr, arg: Expr) => (EvalK(env, fun, EvalK(env, arg, AppK(k))), s)
 
-    case (AddK(k), n2 :: n1 :: s) => (k, numAdd(n1, n2) :: s)
-    case (MulK(k), n2 :: n1 :: s) => (k, numMul(n1, n2) :: s)
-    case (AppK(k), v2 :: f :: s) => f match
-      case CloV(param, body, env) => (EvalK(env + (param -> v2), body, k), s)
-      case _ => error("not a function")
-    case _ => error("invalid operation")
-    
+    case (AddK(k), n2 :: n1 :: s) => (k, numAdd(n1 ,@@ n2) :: s)
+    case (MulK(k), n2 :: n1 :: s) => (k, (n1 * n2) :: s)
+    case (AppK(k), v2 :: CloV(param, body, env) :: s) => (EvalK(env + (param -> v2), body, k), s)
 }
+
+```
+
+
+
+#### Error stacktrace:
+
+```
+scala.collection.LinearSeqOps.apply(LinearSeq.scala:129)
+	scala.collection.LinearSeqOps.apply$(LinearSeq.scala:128)
+	scala.collection.immutable.List.apply(List.scala:79)
+	dotty.tools.dotc.util.Signatures$.applyCallInfo(Signatures.scala:244)
+	dotty.tools.dotc.util.Signatures$.computeSignatureHelp(Signatures.scala:101)
+	dotty.tools.dotc.util.Signatures$.signatureHelp(Signatures.scala:88)
+	dotty.tools.pc.SignatureHelpProvider$.signatureHelp(SignatureHelpProvider.scala:47)
+	dotty.tools.pc.ScalaPresentationCompiler.signatureHelp$$anonfun$1(ScalaPresentationCompiler.scala:422)
+```
+#### Short summary: 
+
+java.lang.IndexOutOfBoundsException: -1

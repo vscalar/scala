@@ -1,4 +1,4 @@
-file:///C:/Users/user/OneDrive/바탕%20화면/scala/fvae/src/main/scala/kuplrg/Implementation.scala
+file:///C:/Users/user/OneDrive/바탕%20화면/scala/fae-cps/src/main/scala/kuplrg/Implementation.scala
 ### java.lang.IllegalArgumentException: Comparison method violates its general contract!
 
 occurred in the presentation compiler.
@@ -12,8 +12,8 @@ Options:
 
 
 action parameters:
-offset: 211
-uri: file:///C:/Users/user/OneDrive/바탕%20화면/scala/fvae/src/main/scala/kuplrg/Implementation.scala
+offset: 361
+uri: file:///C:/Users/user/OneDrive/바탕%20화면/scala/fae-cps/src/main/scala/kuplrg/Implementation.scala
 text:
 ```scala
 package kuplrg
@@ -22,18 +22,27 @@ object Implementation extends Template {
 
   import Expr.*
   import Value.*
+  import Cont.*
 
-  def interp(expr: Expr, env: Env): Value = expr match
-    case Num(n) => n
-    case Add(l,r) => interp(l, env@@) + interp(r, env, fenv)
-    case Mul(l,r) => interp(l, env, fenv) * interp(r, env, fenv)
-    case Val(x, e, b) => interp(b, env + (x -> interp(e, env, fenv)), fenv)
-    case Id(x) => env.getOrElse(x, error("free identifier"))
-    case App(f, e) => 
-      val fdef  = fenv.getOrElse(f, error(s"unknown function: $f"))
-      interp(fdef.body, Map(fdef.param -> interp(e, env, fenv)), fenv)
+  def interpCPS(expr: Expr, env: Env, k: Value => Value): Value = expr match
+  // numbers
+  case Num(number: BigInt) => k(NumV(number))
+  // additions
+  case Add(left: Expr, right: Expr) => 
+    interpCPS(left, env, lv => interpCPS(right, e@@)
+      )
+  // multiplications
+  case Mul(left: Expr, right: Expr)
+  // identifier lookups
+  case Id(name: String)
+  // anonymous (lambda) functions
+  case Fun(param: String, body: Expr)
+  // function applications
+  case App(fun: Expr, arg: Expr)
+  
 
-  def interpDS(expr: Expr, env: Env): Value = ???
+  def reduce(k: Cont, s: Stack): (Cont, Stack) = ???
+
 }
 
 ```
