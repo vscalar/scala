@@ -10,10 +10,32 @@ object Implementation extends Template {
   // ---------------------------------------------------------------------------
   // Problem #1
   // ---------------------------------------------------------------------------
+  type BOp[T] = (T, T) => T
+  def numBOp1(op: BOp[BigInt]): BOp[Value] = (_, _) match
+    case (NumV(l), NumV(r))=> NumV(op(l, r))
+    case _ => error("invalid operation")
+  
+  val numAdd: BOp[Value] = numBOp1(_ + _)
+  val numMul: BOp[Value] = numBOp1(_ * _)
+
+  def numBOp2(op: BOp[BigInt]): BOp[Value] = (_, _) match
+    case (NumV(l), NumV(r)) if (NumV(r) != NumV(0))=> NumV(op(l, r))
+    case _ => error("invalid operation")
+  
+  val numDiv: BOp[Value] = numBOp2(_ / _)
+  val numMod: BOp[Value] = numBOp2(_ % _)
+
+  type COp[T] = (T, T) => Boolean
+  def numCOp(op: COp[BigInt]): BOp[Value] =
+    case (NumV(l), NumV(r)) => BoolV(op(l, r))
+    case _ => error("invalid operation")
+  
+  val numLt: BOp[Value] = numCOp(_ < _)
+
   def reduce(st: State): State =
     val State(k, s, h, mem) = st
-    k match
-      case IEval(env: Env, expr: Expr) :: cont => expr match
+    (k, s, h, mem) match
+      case (IEval(env: Env, expr: Expr) :: cont, s, h, mem) => expr match
         case EUndef => State(cont, UndefV::s,h,mem)
         case ENum(number: BigInt)=> State(cont, NumV(number)::s,h,mem)
         case EBool(bool: Boolean) => State(cont, BoolV(bool)::s,h,mem)
@@ -27,7 +49,16 @@ object Implementation extends Template {
         case EId(name: String) => State(cont,mem(lookup(env, name))::s,h,mem)
         case EAssign(name: String, expr: Expr) => State(IEval(env, expr)::IWrite(lookup(env, name))::cont,s,h,mem)
         case ESeq(left: Expr, right: Expr) => State(IEval(env,left)::IPop::IEval(env,right)::cont,s,h,mem)
+        case EIf(cond: Expr, thenExpr: Expr, elseExpr: Expr) => State(IEval(env,cond)::IJmpIf(KValue(IEval(env, thenExpr)::cont, s, h))::IEval(env,elseExpr)::cont,s,h,mem)
         case _ => State(List(),List(NumV(0)),Map(),Map())
+        
+      case (IAdd :: cont,n2::n1::s,h,mem) => State(cont, numAdd(n1, n2)::s, h,mem)
+      case (IMul :: cont,n2::n1::s,h,mem) => State(cont, numMul(n1, n2)::s, h,mem)
+      case (IDiv :: cont,n2::n1::s,h,mem) => State(cont, numDiv(n1, n2)::s, h,mem)
+      case (IMod :: cont,n2::n1::s,h,mem) => State(cont, numMod(n1, n2)::s, h,mem)
+      case (IEq :: cont,v2::v1::s,h,mem) => State(cont, BoolV(eq(v1, v2))::s, h,mem)
+      case (ILt :: cont,n2::n1::s,h,mem) => State(cont, numLt(n1, n2)::s, h,mem)
+      
       case _ => State(List(),List(NumV(0)),Map(),Map())
 
   // ---------------------------------------------------------------------------
