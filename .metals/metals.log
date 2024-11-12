@@ -13572,3 +13572,12 @@ Exception in thread "pool-1440-thread-1" java.lang.InterruptedException
 2024.11.12 18:01:11 INFO  Shutting down server
 2024.11.12 18:01:11 INFO  shutting down Metals
 2024.11.12 18:01:11 INFO  Exiting server
+2024.11.12 21:25:52 INFO  Started: Metals version 1.4.0 in folders 'C:\Users\user\OneDrive\πŸ≈¡ »≠∏È\scala' for client Visual Studio Code 1.95.2.
+2024.11.12 21:25:53 WARN  Flyway upgrade recommended: H2 2.3.232 is newer than this version of Flyway and support has not been tested. The latest supported version of H2 is 2.2.224.
+2024.11.12 21:25:53 INFO  no build target found for C:\Users\user\OneDrive\πŸ≈¡ »≠∏È\scala\magnet\src\main\scala\kuplrg\Implementation.scala. Using presentation compiler with project's scala-library version: 3.3.4
+2024.11.12 21:25:57 INFO  no build target found for C:\Users\user\OneDrive\πŸ≈¡ »≠∏È\scala\magnet\src\main\scala\kuplrg\Implementation.scala. Using presentation compiler with project's scala-library version: 3.3.4
+2024.11.12 21:26:45 INFO  no build target found for C:\Users\user\OneDrive\πŸ≈¡ »≠∏È\scala\magnet\src\main\scala\kuplrg\Implementation.scala. Using presentation compiler with project's scala-library version: 3.3.4
+2024.11.12 21:26:45 INFO  no build target found for C:\Users\user\OneDrive\πŸ≈¡ »≠∏È\scala\magnet\src\main\scala\kuplrg\Implementation.scala. Using presentation compiler with project's scala-library version: 3.3.4
+2024.11.12 21:26:49 INFO  no build target found for C:\Users\user\OneDrive\πŸ≈¡ »≠∏È\scala\magnet\src\main\scala\kuplrg\Implementation.scala. Using presentation compiler with project's scala-library version: 3.3.4
+2024.11.12 21:27:10 INFO  no build target found for C:\Users\user\OneDrive\πŸ≈¡ »≠∏È\scala\magnet\src\main\scala\kuplrg\Implementation.scala. Using presentation compiler with project's scala-library version: 3.3.4
+2024.11.12 21:28:08 INFO  no build target found for C:\Users\user\OneDrive\πŸ≈¡ »≠∏È\scala\magnet\src\main\scala\kuplrg\Implementation.scala. Using presentation compiler with project's scala-library version: 3.3.4
