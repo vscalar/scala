@@ -1,3 +1,16 @@
+file:///C:/Users/user/OneDrive/바탕%20화면/scala/magnet/src/main/scala/kuplrg/Implementation.scala
+### java.lang.IndexOutOfBoundsException: -1
+
+occurred in the presentation compiler.
+
+presentation compiler configuration:
+
+
+action parameters:
+offset: 5464
+uri: file:///C:/Users/user/OneDrive/바탕%20화면/scala/magnet/src/main/scala/kuplrg/Implementation.scala
+text:
+```scala
 package kuplrg
 
 object Implementation extends Template {
@@ -84,12 +97,7 @@ object Implementation extends Template {
       case (IJmpIf(KValue(cont,s,h))::_,BoolV(true)::_,_,mem) => State(cont, s, h,mem)
       case (IJmpIf(_)::cont,BoolV(false)::s,h,mem) => State(cont, s, h,mem)
       case (IJmp(c)::cont,v::s,h,mem) => 
-        val kv = lookup(h, c)
-        kv match
-          case KValue(cont1, s1, h1) => 
-            val h2 = if (h.contains(Yield)) h1 + (Yield -> lookup(h, Yield)) else h1
-            State(cont1,v::s,h2,mem)
-        
+        h(@@)
       case _ => State(List(),List(NumV(0)),Map(),Map())
 
   // ---------------------------------------------------------------------------
@@ -120,3 +128,23 @@ object Implementation extends Template {
     case (ResultV(lv, ld), ResultV(rv, rd)) => eq(lv, rv) && ld == rd
     case _                                  => false
 }
+
+```
+
+
+
+#### Error stacktrace:
+
+```
+scala.collection.LinearSeqOps.apply(LinearSeq.scala:129)
+	scala.collection.LinearSeqOps.apply$(LinearSeq.scala:128)
+	scala.collection.immutable.List.apply(List.scala:79)
+	dotty.tools.dotc.util.Signatures$.applyCallInfo(Signatures.scala:244)
+	dotty.tools.dotc.util.Signatures$.computeSignatureHelp(Signatures.scala:101)
+	dotty.tools.dotc.util.Signatures$.signatureHelp(Signatures.scala:88)
+	dotty.tools.pc.SignatureHelpProvider$.signatureHelp(SignatureHelpProvider.scala:47)
+	dotty.tools.pc.ScalaPresentationCompiler.signatureHelp$$anonfun$1(ScalaPresentationCompiler.scala:422)
+```
+#### Short summary: 
+
+java.lang.IndexOutOfBoundsException: -1
