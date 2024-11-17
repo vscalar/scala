@@ -119,9 +119,11 @@ object Implementation extends Template {
         
       case (IWrite(addr: Addr)::cont,v::s,h,mem) => State(cont, v::s, h,mem + (addr -> v))
       case (IPop::cont,v::s,h,mem) => State(cont, s, h,mem)
-      case (IJmpIf(KValue(cont,s,h))::_,BoolV(true)::_,_,mem) => State(cont, s, h,mem)
-      case (IJmpIf(_)::cont,BoolV(false)::s,h,mem) => State(cont, s, h,mem)
-      case (IJmpIf(_)::cont,_::s,h,mem) => error()
+      case (IJmpIf(KValue(cont1,s1,h1))::cont, b::s, h, mem) => b match
+        case BoolV(true) => State(cont1, s1, h1, mem)
+        case BoolV(false) => State(cont, s, h, mem)
+        case _ => error()
+        
       case (IJmp(c)::cont,v::s,h,mem) => 
         val kv = lookup(h, c)
         kv match
