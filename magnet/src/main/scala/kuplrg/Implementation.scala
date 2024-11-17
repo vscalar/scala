@@ -93,30 +93,20 @@ object Implementation extends Template {
           State(IEval(env, body)::IJmp(Finally)::Nil,s,hBody,mem)
 
         case EThrow(expr: Expr) => State(IEval(env, expr)::IJmp(Throw)::k,s,h,mem)
-
         case EGen(params: List[String], body: Expr) => State(cont,GenV(params, body, env)::s,h,mem)
-
         case EIterNext(iter: Expr, arg: Option[Expr]) => arg match
           case Some(expr) => State(IEval(env, iter)::IEval(env, expr)::INext::cont,s,h,mem)
-
           case _ => State(IEval(env, iter)::IEval(env, EUndef)::INext::cont,s,h,mem)
         
         case EYield(expr: Expr) => State(IEval(env, expr)::IYield::Nil,BoolV(false)::ContV(KValue(cont,s,h))::s,h,mem)
-
         case EValueField(result: Expr) => State(IEval(env,result)::IValueField::cont,s,h,mem)
-
         case EDoneField(result: Expr) => State(IEval(env,result)::IDoneField::cont,s,h,mem)
         
       case (IAdd::cont,n2::n1::s,h,mem) => State(cont, numAdd(n1, n2)::s, h,mem)
-
       case (IMul::cont,n2::n1::s,h,mem) => State(cont, numMul(n1, n2)::s, h,mem)
-
       case (IDiv::cont,n2::n1::s,h,mem) => State(cont, numDiv(n1, n2)::s, h,mem)
-
       case (IMod::cont,n2::n1::s,h,mem) => State(cont, numMod(n1, n2)::s, h,mem)
-
       case (IEq::cont,v2::v1::s,h,mem) => State(cont, BoolV(eq(v1, v2))::s, h,mem)
-
       case (ILt::cont,n2::n1::s,h,mem) => State(cont, numLt(n1, n2)::s, h,mem)
 
       case (IDef(xs: List[String], env: Env, body: Expr) :: cont, s, h, mem) => 
@@ -128,15 +118,10 @@ object Implementation extends Template {
         State(IEval(newEnv,body) :: cont,stack,h,newMem)
         
       case (IWrite(addr: Addr)::cont,v::s,h,mem) => State(cont, v::s, h,mem + (addr -> v))
-
       case (IPop::cont,v::s,h,mem) => State(cont, s, h,mem)
-
       case (IJmpIf(KValue(cont,s,h))::_,BoolV(true)::_,_,mem) => State(cont, s, h,mem)
-
       case (IJmpIf(_)::cont,BoolV(false)::s,h,mem) => State(cont, s, h,mem)
-
       case (IJmpIf(_)::cont,_::s,h,mem) => error()
-
       case (IJmp(c)::cont,v::s,h,mem) => 
         val kv = lookup(h, c)
         kv match
@@ -170,9 +155,7 @@ object Implementation extends Template {
           case _ => error()
       
       case (IValueField::cont, ResultV(v, _)::s, h, mem) => State(cont, v::s, h, mem)
-
       case (IDoneField::cont, ResultV(_, b)::s, h, mem) => State(cont, BoolV(b)::s, h, mem)
-
       case (ICall(n)::cont, s, h, mem) =>
         val (varList, stack) = s.splitAt(n)
         stack match
