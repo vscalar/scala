@@ -66,9 +66,9 @@ object Implementation extends Template {
         val argVal = interp(arg, env)
         interp(body, fenv + (param -> argVal))
     
-      case _ => error()
+      case _ => error(s"${fun.str} is not a function")
     
 
   def mustSame(lty: Type, rty: Type): Unit =
-    if (lty != rty) error(s"tyep mismatch: ${lty.str} != ${rty.str}")
+    if (lty != rty) error(s"type mismatch: ${lty.str} != ${rty.str}")
 }
