@@ -4,6 +4,8 @@ import Implementation.*
 
 class Spec extends SpecBase {
 
+  override val TIME_LIMIT = 3
+
   // -------------------------------------------------------------------------
   // Problem #1: eval
   // -------------------------------------------------------------------------
@@ -62,62 +64,36 @@ class Spec extends SpecBase {
   testExc(eval("1(2)"))
   test(eval("while (false) 42"), "undefined", weight = 3)
   test(eval("var x = 0; while (x < 3) x += 1; x"), "3", weight = 3)
-  test(
-    eval("var x = 0; while(true) { if (x > 1) break else x += 1 }; x"),
-    "2",
-    weight = 3,
-  )
-  test(
-    eval("var x = 0; while(x < 3) { x += 1; continue; return 0 }; x"),
-    "3",
-    weight = 3,
-  )
+  test(eval("var x = 0; while(true) { if (x > 1) break else x += 1 }; x"),
+    "2", weight = 3)
+  test(eval("var x = 0; while(x < 3) { x += 1; continue; return 0 }; x"),
+    "3", weight = 3)
   testExc(eval("while (42) 42"), weight = 3)
   testExc(eval("var f = () => break; while (true) f()"), weight = 3)
   testExc(eval("var f = () => continue; while (true) f()"), weight = 3)
   test(eval("try 1 catch (e) e"), "1", weight = 3)
   test(eval("try (throw 1) + 2 catch (e) e"), "1", weight = 3)
   testExc(eval("throw 1"), weight = 3)
-  test(
-    eval("var f = x => throw x + 1; try f(1) * 5 catch (e) e"),
-    "2",
-    weight = 3,
-  )
+  test(eval("var f = x => throw x + 1; try f(1) * 5 catch (e) e"),
+    "2", weight = 3)
   test(eval("x =>* x"), "<generator>", weight = 3)
   test(eval("(x =>* x)(42)"), "<iterator>", weight = 3)
-  test(eval("(x =>* x)(42).next()"), "{ value: 42, done: true }", weight = 3)
-  test(
-    eval("(x =>* yield x)(42).next()"),
-    "{ value: 42, done: false }",
-    weight = 3,
-  )
+  test(eval("(x =>* x)(42).next()"),
+    "{ value: 42, done: true }", weight = 3)
+  test(eval("(x =>* yield x)(42).next()"),
+    "{ value: 42, done: false }", weight = 3)
   test(eval("(x =>* x)(42).next().value"), "42", weight = 3)
   test(eval("(x =>* x)(42).next().done"), "true", weight = 3)
-  test(
-    eval("(x =>* { return 1; 2 })().next()"),
-    "{ value: 1, done: true }",
-    weight = 3,
-  )
-  test(
-    eval("(x =>* { throw 42; 2 })().next()"),
-    "{ value: 42, done: true }",
-    weight = 3,
-  )
-  test(
-    eval("(x =>* (yield x + 1) * 3)(2).next()"),
-    "{ value: 3, done: false }",
-    weight = 3,
-  )
-  test(
-    eval("var i = (x =>* yield(yield 1))(); i.next(); i.next(7).value"),
-    "7",
-    weight = 3,
-  )
-  test(
-    eval("var i = (x =>* x)(); i.next(); i.next()"),
-    "{ value: undefined, done: true }",
-    weight = 3,
-  )
+  test(eval("(x =>* { return 1; 2 })().next()"),
+    "{ value: 1, done: true }", weight = 3)
+  test(eval("(x =>* { throw 42; 2 })().next()"),
+    "{ value: 42, done: true }", weight = 3)
+  test(eval("(x =>* (yield x + 1) * 3)(2).next()"),
+    "{ value: 3, done: false }", weight = 3)
+  test(eval("var i = (x =>* yield(yield 1))(); i.next(); i.next(7).value"),
+    "7", weight = 3)
+  test(eval("var i = (x =>* x)(); i.next(); i.next()"),
+    "{ value: undefined, done: true }", weight = 3)
 
   val expr1 = """
     var x = 10;
@@ -291,10 +267,169 @@ class Spec extends SpecBase {
   // test case generator for squareSumExpr
   def squareSum(n: Int, m: Int): Int = (n to m).map(x => x * x).sum
   def pass = (0 until 50).forall {
-    case k =>
-      eval(squareSumExpr(k / 2 + 1, k)) == squareSum(k / 2 + 1, k).toString
+    case k => eval(squareSumExpr(k/2+1, k)) == squareSum(k/2+1, k).toString
   }
   test(passAll && pass, true, weight = 40)
 
-  /* Write your own tests */
+  //new tests for squareSumExpr
+  def newPass = (-10 to 10).forall {
+    case i => (-10 to 10).forall {
+      case j => eval(squareSumExpr(i, j)) == squareSum(i, j).toString
+    }
+  }
+  test(passAll && newPass, true, weight = 50)
+  
+  // newly added tests
+  
+  testExc(eval("f = () => break; f()"), weight = 5)
+  testExc(eval("f = () => continue; f()"), weight = 5)
+  testExc(eval("(x =>* x)(42).value"), weight = 5)
+  testExc(eval("(x =>* x)(42).done"), weight = 5)
+  testExc(eval("((x, y) => x + y)(3)"), weight = 5)
+  test(eval("((x, y) => x + x)(3)"), "6", weight = 5)
+  testExc(eval("(x =>* x)(42).next().next()"), weight = 10)
+  test(eval("while(true) break;"), "undefined", weight = 10)
+  testExc(eval("(x => {var y = 1; x + 1})(3); y"), weight = 10)
+  test(eval("var x = (x => {x = 5; x + 1}); x(x(x))"), "6", weight = 10)
+  test(eval("var y = (() =>* { x => true }); y(y)"), "<iterator>", weight = 10)
+  test(eval("var z = (() => 5); z((z, x) => x)"), "5", weight = 10)
+  
+  val expr11 = """
+    function* allNatural() {
+      var n = 0;
+      while (true) yield n++;
+    }
+    var iter1 = allNatural();
+    var iter2 = allNatural();
+    iter1 == iter2
+  """
+  test(eval(expr11), "false", weight = 10)
+
+  val expr12 = """
+    function* allNatural() {
+      var n = 0;
+      while (true) yield n++;
+    }
+    var r1 = allNatural().next();
+    var r2 = allNatural().next();
+    r1 == r2
+  """
+  test(eval(expr12), "true", weight = 10)
+
+  val expr13 = """
+    function* range(from, until) {
+      if (until == undefined) { until = from; from = 0; }
+      else undefined;
+      while (from < until) yield from++;
+    }
+    function sum(iter) {
+      var result = 0;
+      for (x of iter) result += x;
+      return result;
+    }
+    sum(range(6, 5));
+  """
+  test(eval(expr13), "0", weight = 10)
+
+  val expr14 = """
+    function recSum(x) {
+      if (x <= 0) return 0;
+      else return x + recSum(x - 1);
+    }
+    recSum(5);
+  """
+  testExc(eval(expr14), weight = 5)
+
+  val expr15 = """
+    function recSum(x) {
+      if (x <= 0) return 0;
+      else return x + recSum(x - 1);
+    }
+    recSum(0);
+  """
+  test(eval(expr15), "0", weight = 5)
+
+  val expr16 = """
+    function range(from, until) {
+      while (from < until) yield from++;
+    }
+    range(6, 15);
+  """
+  testExc(eval(expr16), weight = 10)
+
+  val expr17 = """
+    function* range(from, until, step) {
+      if (until == undefined) {until = from; from = 0;}
+      else undefined;
+      if(step == undefined) step = 1;
+      else undefined;
+      while (step * (until - from) > 0) {
+        yield from;
+        from += step;
+      }
+    }
+    function sum(iter) {
+      var result = 0;
+      for (x of iter) result += x;
+      return result;
+    }
+    sum(range(5)) + sum(range(17, 5, -3));
+  """
+  test(eval(expr17), "60", weight = 10)
+
+  val expr18 = """
+    function gcd(x, y) {
+      while (x > 0 && y > 0) {
+        if (x > y) x = x % y;
+        else y = y % x;
+      };
+      return x + y;
+    }
+    gcd(36, 60) + gcd(125, 148)
+  """
+  test(eval(expr18), "13", weight = 10)
+
+  val expr19 = """
+    var mkRec = body => {
+      var fX = fY => {
+        var f = x => fY(fY)(x);
+        body(f)
+      };
+      fX(fX)
+    };
+    var toBin = mkRec(toBin => n => {
+      if (n == 0) 0;
+      else n % 2 + 10 * toBin(n / 2);
+    });
+    toBin(150)
+  """
+  test(eval(expr19), "10010110", weight = 10)
+
+  val expr20 = """
+    var g = (x =>* yield((yield 1) == (yield 2)));
+    var i = g();
+    i.next();
+    i.next(5);
+    i.next(5).value;
+  """
+  test(eval(expr20), "true", weight = 10)
+
+  val expr21 = """
+    var z = (x => x);
+    z(try z catch (y) x, () =>* yield 1)
+  """
+  test(eval(expr21), "<function>", weight = 10)
+
+  val expr22 = """
+    var i = (x =>* {return (yield x); yield x + 1})(42);
+    i.next(); i.next()
+  """
+  test(eval(expr22), "{ value: undefined, done: true }", weight = 10)
+
+  testExc(eval("try { throw (true) } catch (x) { throw true } "), weight = 60)
+  test(eval("var f = x => { throw (return true); }; f(1)"), "true", weight = 60)
+  test(eval("var y = ((x, z) => { if (return 1) { 1 } else { 1 } }); y()"), "1", weight = 60)
+  testExc(eval("var z = (f => { var y = (() =>* { 1 }); f() }); z()"), weight = 60)
+  test(eval("try { try { 1 } catch (x) { 1 } } catch (y) { 1 }"), "1", weight = 60)
+
 }
