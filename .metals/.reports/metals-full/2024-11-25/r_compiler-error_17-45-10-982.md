@@ -1,3 +1,16 @@
+file:///C:/Users/user/OneDrive/바탕%20화면/scala/atfae/src/main/scala/kuplrg/Implementation.scala
+### java.lang.IndexOutOfBoundsException: -1
+
+occurred in the presentation compiler.
+
+presentation compiler configuration:
+
+
+action parameters:
+offset: 6838
+uri: file:///C:/Users/user/OneDrive/바탕%20화면/scala/atfae/src/main/scala/kuplrg/Implementation.scala
+text:
+```scala
 package kuplrg
 
 object Implementation extends Template {
@@ -100,7 +113,7 @@ object Implementation extends Template {
       mustSame(bty, rty)
       typeCheck(scope, tenv.addVar(x, fty))
     // function applications
-    case App(fun: Expr, args: List[Expr]) => typeCheck(fun, tenv) match
+    case App(fun: Expr, args: List[Expr]) => fun match
       case ArrowT(ptys, rty) =>
         if (ptys.length != args.length) error("arity mismatch")
         (ptys zip args).map((p, a) => mustSame(typeCheck(a, tenv), p))
@@ -113,10 +126,9 @@ object Implementation extends Template {
       typeCheck(thenExpr, tenv)
     // algebraic data type
     case TypeDef(name: String, varts: List[Variant], body: Expr) =>
-      if (tenv.tys.contains(name)) error(s"already defined type: $name")
       val newTEnv = tenv.addType(name, varts.map(w => w.name -> w.ptys).toMap)
       for (w <- varts; pty <- w.ptys) mustValid(pty, newTEnv)
-      mustValid(typeCheck(body, newTEnv.addVars(varts.map(w => w.name -> ArrowT(w.ptys, NameT(name))))), tenv)
+      typeCheck(body, newTEnv.addVars(varts.map(w => w.name -> ArrowT(w.ptys, NameT(name)))))
     // pattern matching
     case Match(expr: Expr, mcases: List[MatchCase]) => typeCheck(expr, tenv) match
       case NameT(tn) =>
@@ -131,12 +143,7 @@ object Implementation extends Template {
 
   
 
-  def interp(expr: Expr, env: Env): Value = 
-    // println()
-    // println(expr)
-    // println()
-    // println(env)
-    expr match
+  def interp(expr: Expr, env: Env): Value = expr match
     // numbers
     case Num(number: BigInt) => NumV(number)
     // booleans
@@ -173,14 +180,14 @@ object Implementation extends Template {
       CloV(params.map(_.name), body, () => env)
     // recursive functions
     case Rec(x: String, params: List[Param], rty: Type, body: Expr, scope: Expr) =>
-      lazy val newEnv : Env = env + (x -> CloV(params.map(_.name), body, () => newEnv))
-      interp(scope, newEnv)
+      val funMapping = (x -> CloV(params.map(_.name), body, () => env))
+      interp(scope, env + funMapping)
     // function applications
-    case App(fun: Expr, args: List[Expr]) => interp(fun, env) match
+    case App(fun: Expr, args: List[Expr]) => fun match
       case CloV(param, body, fenv) => 
         val argVal = args.map(interp(_, env))
-        val paramMap = param.zip(argVal)
-        interp(body, fenv() ++ paramMap)
+        val paramMap = param.zip(@@)
+        interp(body, fenv() + paramMap)
       case ConstrV(name) => VariantV(name, args.map(interp(_, env)))
       case v => error(s"not a function: ${v.str}")
     // conditional
@@ -202,3 +209,23 @@ object Implementation extends Template {
         case None => error(s"no such case: $wname")
       case v => error(s"not a variant: ${v.str}")
 }
+
+```
+
+
+
+#### Error stacktrace:
+
+```
+scala.collection.LinearSeqOps.apply(LinearSeq.scala:129)
+	scala.collection.LinearSeqOps.apply$(LinearSeq.scala:128)
+	scala.collection.immutable.List.apply(List.scala:79)
+	dotty.tools.dotc.util.Signatures$.applyCallInfo(Signatures.scala:244)
+	dotty.tools.dotc.util.Signatures$.computeSignatureHelp(Signatures.scala:101)
+	dotty.tools.dotc.util.Signatures$.signatureHelp(Signatures.scala:88)
+	dotty.tools.pc.SignatureHelpProvider$.signatureHelp(SignatureHelpProvider.scala:47)
+	dotty.tools.pc.ScalaPresentationCompiler.signatureHelp$$anonfun$1(ScalaPresentationCompiler.scala:422)
+```
+#### Short summary: 
+
+java.lang.IndexOutOfBoundsException: -1

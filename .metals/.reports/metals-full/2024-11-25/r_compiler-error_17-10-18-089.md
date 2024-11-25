@@ -1,3 +1,16 @@
+file:///C:/Users/user/OneDrive/바탕%20화면/scala/atfae/src/main/scala/kuplrg/Implementation.scala
+### java.lang.IllegalArgumentException: Comparison method violates its general contract!
+
+occurred in the presentation compiler.
+
+presentation compiler configuration:
+
+
+action parameters:
+offset: 6907
+uri: file:///C:/Users/user/OneDrive/바탕%20화면/scala/atfae/src/main/scala/kuplrg/Implementation.scala
+text:
+```scala
 package kuplrg
 
 object Implementation extends Template {
@@ -35,7 +48,7 @@ object Implementation extends Template {
     case NumT => NumT
     case BoolT => BoolT
     case ArrowT(ptys, rty) => 
-      ArrowT(ptys.map(mustValid(_, tenv)), mustValid(rty, tenv))
+      ArrowT(ptys.map(_, tenv), mustValid(rty, tenv))
     case NameT(tn) =>
       if (!tenv.tys.contains(tn)) error(s"invalid type name: $tn")
       NameT(tn)
@@ -80,10 +93,10 @@ object Implementation extends Template {
     // immutable variable definition
     case Val(name: String, init: Expr, body: Expr) =>
       val initType = typeCheck(init, tenv)
-      typeCheck(body, tenv.addVar(name, initType))
+      typeCheck(body, tenv + (name -> initType))
     // identifier lookups
     case Id(name: String) =>
-      tenv.vars.getOrElse(name, error("free identifier"))
+      tenv.getOrElse(name, error("free identifier"))
     // anonymous (lambda) functions
     case Fun(params: List[Param], body: Expr) =>
       val ptys = params.map(_.ty)
@@ -98,12 +111,12 @@ object Implementation extends Template {
       val fty = ArrowT(ptys, rty)
       val bty = typeCheck(body, tenv.addVar(x -> fty).addVars(params.map(p => p.name -> p.ty)))
       mustSame(bty, rty)
-      typeCheck(scope, tenv.addVar(x, fty))
+      typeCheck(scope, tenv.addVar(x - fty))
     // function applications
-    case App(fun: Expr, args: List[Expr]) => typeCheck(fun, tenv) match
+    case App(fun: Expr, args: List[Expr]) =>
       case ArrowT(ptys, rty) =>
         if (ptys.length != args.length) error("arity mismatch")
-        (ptys zip args).map((p, a) => mustSame(typeCheck(a, tenv), p))
+        (pyts zip args).map((p, a) => mustSame(typeCheck(a, tenv), p))
         rty
       case ty => error(s"not a function type: ${ty.str}")
     // conditional
@@ -113,10 +126,9 @@ object Implementation extends Template {
       typeCheck(thenExpr, tenv)
     // algebraic data type
     case TypeDef(name: String, varts: List[Variant], body: Expr) =>
-      if (tenv.tys.contains(name)) error(s"already defined type: $name")
       val newTEnv = tenv.addType(name, varts.map(w => w.name -> w.ptys).toMap)
       for (w <- varts; pty <- w.ptys) mustValid(pty, newTEnv)
-      mustValid(typeCheck(body, newTEnv.addVars(varts.map(w => w.name -> ArrowT(w.ptys, NameT(name))))), tenv)
+      typeCheck(body, newTEnv.addVars(varts.map(w => w.name -> ArrowT(w.ptys, NameT(name)))))
     // pattern matching
     case Match(expr: Expr, mcases: List[MatchCase]) => typeCheck(expr, tenv) match
       case NameT(tn) =>
@@ -131,12 +143,7 @@ object Implementation extends Template {
 
   
 
-  def interp(expr: Expr, env: Env): Value = 
-    // println()
-    // println(expr)
-    // println()
-    // println(env)
-    expr match
+  def interp(expr: Expr, env: Env): Value = expr match
     // numbers
     case Num(number: BigInt) => NumV(number)
     // booleans
@@ -170,35 +177,48 @@ object Implementation extends Template {
       env.getOrElse(name, error("free identifier"))
     // anonymous (lambda) functions
     case Fun(params: List[Param], body: Expr) =>
-      CloV(params.map(_.name), body, () => env)
+      CloV(params, body, () => env)
     // recursive functions
     case Rec(x: String, params: List[Param], rty: Type, body: Expr, scope: Expr) =>
-      lazy val newEnv : Env = env + (x -> CloV(params.map(_.name), body, () => newEnv))
-      interp(scope, newEnv)
+      val funMapping = (x -> CloV(params, body, () => env))
+      interp(scope, env + funMapping)
     // function applications
-    case App(fun: Expr, args: List[Expr]) => interp(fun, env) match
+    case App(fun: Expr, args: List[Expr]) => fun match
       case CloV(param, body, fenv) => 
         val argVal = args.map(interp(_, env))
-        val paramMap = param.zip(argVal)
-        interp(body, fenv() ++ paramMap)
-      case ConstrV(name) => VariantV(name, args.map(interp(_, env)))
-      case v => error(s"not a function: ${v.str}")
+        val paramMap = (param zip argVal).toMap
+        interp(body, fenv ++ paramMap)
+      case ConstrV(name) => VariantV(name, args.map(interp(_, en@@)))
     // conditional
-    case If(cond: Expr, thenExpr: Expr, elseExpr: Expr) => interp(cond, env) match
-      case BoolV(true) =>
-        interp(thenExpr, env)
-      case BoolV(false) =>
-        interp(elseExpr, env)
-      case _ => error()
+    case If(cond: Expr, thenExpr: Expr, elseExpr: Expr)
     // algebraic data type
-    case TypeDef(name: String, varts: List[Variant], body: Expr) =>
-      interp(body, env ++ varts.map(w => w.name -> ConstrV(w.name)))
+    case TypeDef(name: String, varts: List[Variant], body: Expr)
     // pattern matching
-    case Match(expr: Expr, mcases: List[MatchCase]) => interp(expr, env) match
-      case VariantV(wname, vs) => mcases.find(_.name == wname) match
-        case Some(MatchCase(_, ps, b)) =>
-          if (ps.length != vs.length) error("arity mismatch")
-          interp(b, env ++ (ps zip vs))
-        case None => error(s"no such case: $wname")
-      case v => error(s"not a variant: ${v.str}")
+    case Match(expr: Expr, mcases: List[MatchCase])
 }
+
+```
+
+
+
+#### Error stacktrace:
+
+```
+java.base/java.util.TimSort.mergeLo(TimSort.java:781)
+	java.base/java.util.TimSort.mergeAt(TimSort.java:518)
+	java.base/java.util.TimSort.mergeForceCollapse(TimSort.java:461)
+	java.base/java.util.TimSort.sort(TimSort.java:254)
+	java.base/java.util.Arrays.sort(Arrays.java:1233)
+	scala.collection.SeqOps.sorted(Seq.scala:728)
+	scala.collection.SeqOps.sorted$(Seq.scala:719)
+	scala.collection.immutable.List.scala$collection$immutable$StrictOptimizedSeqOps$$super$sorted(List.scala:79)
+	scala.collection.immutable.StrictOptimizedSeqOps.sorted(StrictOptimizedSeqOps.scala:75)
+	scala.collection.immutable.StrictOptimizedSeqOps.sorted$(StrictOptimizedSeqOps.scala:75)
+	scala.collection.immutable.List.sorted(List.scala:79)
+	dotty.tools.pc.completions.Completions.completions(Completions.scala:143)
+	dotty.tools.pc.completions.CompletionProvider.completions(CompletionProvider.scala:90)
+	dotty.tools.pc.ScalaPresentationCompiler.complete$$anonfun$1(ScalaPresentationCompiler.scala:146)
+```
+#### Short summary: 
+
+java.lang.IllegalArgumentException: Comparison method violates its general contract!
