@@ -19086,3 +19086,49 @@ Exception in thread "pool-498-thread-1" java.lang.InterruptedException
 2024.11.25 18:01:50 INFO  no build target found for C:\Users\user\OneDrive\바탕 화면\scala\atfae\src\main\scala\kuplrg\Implementation.scala. Using presentation compiler with project's scala-library version: 3.3.4
 2024.11.25 18:01:50 INFO  no build target found for C:\Users\user\OneDrive\바탕 화면\scala\atfae\src\main\scala\kuplrg\Implementation.scala. Using presentation compiler with project's scala-library version: 3.3.4
 2024.11.25 18:02:01 INFO  no build target found for C:\Users\user\OneDrive\바탕 화면\scala\atfae\src\main\scala\kuplrg\Implementation.scala. Using presentation compiler with project's scala-library version: 3.3.4
+2024.11.25 18:02:01 INFO  no build target found for C:\Users\user\OneDrive\바탕 화면\scala\atfae\src\main\scala\kuplrg\Implementation.scala. Using presentation compiler with project's scala-library version: 3.3.4
+2024.11.25 18:02:02 INFO  no build target found for C:\Users\user\OneDrive\바탕 화면\scala\atfae\src\main\scala\kuplrg\Implementation.scala. Using presentation compiler with project's scala-library version: 3.3.4
+2024.11.25 18:02:02 INFO  no build target found for C:\Users\user\OneDrive\바탕 화면\scala\atfae\src\main\scala\kuplrg\Implementation.scala. Using presentation compiler with project's scala-library version: 3.3.4
+2024.11.25 18:02:04 INFO  no build target found for C:\Users\user\OneDrive\바탕 화면\scala\atfae\src\main\scala\kuplrg\Implementation.scala. Using presentation compiler with project's scala-library version: 3.3.4
+2024.11.25 18:02:04 INFO  no build target found for C:\Users\user\OneDrive\바탕 화면\scala\atfae\src\main\scala\kuplrg\Implementation.scala. Using presentation compiler with project's scala-library version: 3.3.4
+2024.11.25 18:02:05 INFO  no build target found for C:\Users\user\OneDrive\바탕 화면\scala\atfae\src\main\scala\kuplrg\Implementation.scala. Using presentation compiler with project's scala-library version: 3.3.4
+2024.11.25 18:02:05 INFO  no build target found for C:\Users\user\OneDrive\바탕 화면\scala\atfae\src\main\scala\kuplrg\Implementation.scala. Using presentation compiler with project's scala-library version: 3.3.4
+2024.11.25 18:02:05 INFO  no build target found for C:\Users\user\OneDrive\바탕 화면\scala\atfae\src\main\scala\kuplrg\Implementation.scala. Using presentation compiler with project's scala-library version: 3.3.4
+2024.11.25 18:02:05 INFO  no build target found for C:\Users\user\OneDrive\바탕 화면\scala\atfae\src\main\scala\kuplrg\Implementation.scala. Using presentation compiler with project's scala-library version: 3.3.4
+2024.11.25 18:02:05 INFO  no build target found for C:\Users\user\OneDrive\바탕 화면\scala\atfae\src\main\scala\kuplrg\Implementation.scala. Using presentation compiler with project's scala-library version: 3.3.4
+2024.11.25 18:02:05 INFO  no build target found for C:\Users\user\OneDrive\바탕 화면\scala\atfae\src\main\scala\kuplrg\Implementation.scala. Using presentation compiler with project's scala-library version: 3.3.4
+2024.11.25 18:02:05 INFO  no build target found for C:\Users\user\OneDrive\바탕 화면\scala\atfae\src\main\scala\kuplrg\Implementation.scala. Using presentation compiler with project's scala-library version: 3.3.4
+2024.11.25 18:02:05 INFO  no build target found for C:\Users\user\OneDrive\바탕 화면\scala\atfae\src\main\scala\kuplrg\Implementation.scala. Using presentation compiler with project's scala-library version: 3.3.4
+2024.11.25 18:02:05 INFO  no build target found for C:\Users\user\OneDrive\바탕 화면\scala\atfae\src\main\scala\kuplrg\Implementation.scala. Using presentation compiler with project's scala-library version: 3.3.4
+2024.11.25 18:02:05 INFO  no build target found for C:\Users\user\OneDrive\바탕 화면\scala\atfae\src\main\scala\kuplrg\Implementation.scala. Using presentation compiler with project's scala-library version: 3.3.4
+11월 25, 2024 6:02:06 오후 org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+경고: Unmatched cancel notification for request id 19523
+11월 25, 2024 6:02:06 오후 org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+경고: Unmatched cancel notification for request id 19524
+11월 25, 2024 6:02:06 오후 org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+경고: Unmatched cancel notification for request id 19525
+2024.11.25 18:02:05 INFO  no build target found for C:\Users\user\OneDrive\바탕 화면\scala\atfae\src\main\scala\kuplrg\Implementation.scala. Using presentation compiler with project's scala-library version: 3.3.4
+2024.11.25 18:02:05 INFO  no build target found for C:\Users\user\OneDrive\바탕 화면\scala\atfae\src\test\scala\kuplrg\Spec.scala. Using presentation compiler with project's scala-library version: 3.3.4
+2024.11.25 18:02:06 WARN  no build target for: C:\Users\user\OneDrive\바탕 화면\scala\atfae\src\main\scala\kuplrg\Implementation.scala
+2024.11.25 18:02:06 INFO  no build target found for C:\Users\user\OneDrive\바탕 화면\scala\atfae\src\test\scala\kuplrg\Spec.scala. Using presentation compiler with project's scala-library version: 3.3.4
+2024.11.25 18:02:07 INFO  no build target found for C:\Users\user\OneDrive\바탕 화면\scala\atfae\src\test\scala\kuplrg\Spec.scala. Using presentation compiler with project's scala-library version: 3.3.4
+2024.11.25 18:02:06 INFO  no build target found for C:\Users\user\OneDrive\바탕 화면\scala\atfae\src\test\scala\kuplrg\Spec.scala. Using presentation compiler with project's scala-library version: 3.3.4
+2024.11.25 18:02:06 INFO  no build target found for C:\Users\user\OneDrive\바탕 화면\scala\atfae\src\test\scala\kuplrg\Spec.scala. Using presentation compiler with project's scala-library version: 3.3.4
+2024.11.25 18:02:07 INFO  no build target found for C:\Users\user\OneDrive\바탕 화면\scala\atfae\src\test\scala\kuplrg\Spec.scala. Using presentation compiler with project's scala-library version: 3.3.4
+2024.11.25 18:02:06 INFO  no build target found for C:\Users\user\OneDrive\바탕 화면\scala\atfae\src\test\scala\kuplrg\Spec.scala. Using presentation compiler with project's scala-library version: 3.3.4
+2024.11.25 18:02:08 INFO  no build target found for C:\Users\user\OneDrive\바탕 화면\scala\atfae\src\test\scala\kuplrg\Spec.scala. Using presentation compiler with project's scala-library version: 3.3.4
+2024.11.25 18:02:08 INFO  no build target found for C:\Users\user\OneDrive\바탕 화면\scala\atfae\src\test\scala\kuplrg\Spec.scala. Using presentation compiler with project's scala-library version: 3.3.4
+2024.11.25 18:02:09 WARN  no build target for: C:\Users\user\OneDrive\바탕 화면\scala\atfae\src\test\scala\kuplrg\Spec.scala
+2024.11.25 18:02:09 INFO  no build target found for C:\Users\user\OneDrive\바탕 화면\scala\atfae\src\test\scala\kuplrg\Spec.scala. Using presentation compiler with project's scala-library version: 3.3.4
+2024.11.25 18:02:09 INFO  no build target found for C:\Users\user\OneDrive\바탕 화면\scala\atfae\src\test\scala\kuplrg\Spec.scala. Using presentation compiler with project's scala-library version: 3.3.4
+11월 25, 2024 6:02:29 오후 org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+정보: Unsupported notification method: $/setTrace
+2024.11.26 11:25:16 INFO  tracing is disabled for protocol LSP, to enable tracing of incoming and outgoing JSON messages create an empty file at c:\Users\user\OneDrive\바탕 화면\scala\.metals\lsp.trace.json or C:\Users\user\AppData\Local\scalameta\metals\cache\lsp.trace.json
+2024.11.26 11:25:26 WARN  error while creating a backup for log file
+java.nio.file.FileSystemException: C:\Users\user\OneDrive\바탕 화면\scala\.metals\metals.log -> C:\Users\user\OneDrive\바탕 화면\scala\.metals\.backup_logs\2024-11-26\log_11-25-26-873: 다른 프로세스가 파일을 사용 중이기 때문에 프로세스가 액세스 할 수 없습니다
+
+2024.11.26 11:25:26 INFO  logging to files C:\Users\user\OneDrive\바탕 화면\scala\.metals\metals.log
+2024.11.26 11:25:26 INFO  Started: Metals version 1.4.1 in folders 'C:\Users\user\OneDrive\바탕 화면\scala' for client Visual Studio Code 1.95.3.
+2024.11.26 11:25:32 WARN  Flyway upgrade recommended: H2 2.3.232 is newer than this version of Flyway and support has not been tested. The latest supported version of H2 is 2.2.224.
+2024.11.26 11:25:32 INFO  no build target found for C:\Users\user\OneDrive\바탕 화면\scala\atfae\src\test\scala\kuplrg\Spec.scala. Using presentation compiler with project's scala-library version: 3.3.4
+2024.11.26 11:25:39 INFO  no build target found for C:\Users\user\OneDrive\바탕 화면\scala\atfae\src\test\scala\kuplrg\Spec.scala. Using presentation compiler with project's scala-library version: 3.3.4
