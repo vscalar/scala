@@ -912,5 +912,22 @@ class Spec extends SpecBase {
   )
 
   /* Write your own tests */
+  val myexpr = """
+    enum List[T] {
+    case Nil()
+    case Cons(head: T, tail: List[T])
+  }
+  def sum(l: List[Number]): Number = l match {
+    case Nil() => 0
+    case Cons(x, xs) => x + sum(xs)
+  }
+  def filter[T](l: List[T], f: T => Boolean): List[T] = l match {
+    case Nil() => Nil[T]()
+    case Cons(x, xs) => if (f(x)) Cons[T](x, filter[T](xs, f)) else filter[T](xs, f)
+  }
+  val list = Cons[Number](1, Cons[Number](2, Cons[Number](3, Nil[Number]())));
+  sum(filter[Number](list, (x: Number) => x % 2 == 1))
+  """
 
+  test(eval(myexpr), "4: Number")
 }

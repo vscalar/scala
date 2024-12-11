@@ -70,23 +70,23 @@ object Implementation extends Template {
       ArrowT(tvars, paramTys, retTy)
 
   def isSame(lty : Type, rty : Type) : Boolean = 
-    println(lty)
-    println(rty)
-    println
+    // println(lty)
+    // println(rty)
+    // println
     (lty, rty) match
     case (UnitT, UnitT) => true
     case (NumT, NumT) => true
     case (BoolT, BoolT) => true
     case (StrT, StrT) => true
     case (IdT(name1, tys1), IdT(name2, tys2)) => (tys1, tys2) match
-      case (Nil, Nil) => true
+      case (Nil, Nil) => name1 == name2
       case (head1::types1, head2::types2) =>
         if (tys1.length == tys2.length) (tys1 zip tys2).map((ty1, ty2) => isSame(ty1, ty2)).foldLeft(true)(_&&_)
         else false
       case _ => false
     case (ArrowT(tvars1, paramTys1, retTy1), ArrowT(tvars2, paramTys2, retTy2)) =>
       if (tvars1.length == tvars2.length && paramTys1.length == paramTys2.length)
-        val mapping = (tvars1 zip paramTys1).toMap
+        val mapping = (tvars2 zip paramTys1).toMap
         (paramTys1 zip paramTys2).map((ty1, ty2) => isSame(ty1, subst(ty2, mapping))).foldLeft(true)(_&&_) && isSame(retTy1, subst(retTy2, mapping))
       else error("arity mismatch")
     case _ => false
@@ -204,16 +204,14 @@ object Implementation extends Template {
           case IdT(name, tys) => tenv.tys.getOrElse(name, error(s"$name not in type environment")) match
             case TIVar => error("not an ADT")
             case TIAdt(tvars, variants) =>
+              val mapping = (tvars zip tys).toMap
               val ts = variants.keySet
               val xs = mcases.map(_.name).toSet
               if (ts != xs || xs.size != mcases.length) error("invalid case")
-              val mapping = (tvars zip tys).toMap
-              mcases.map{ case MatchCase(x, ps, b) =>
-                val pty = variants(x).map(_.ty)
-                typeCheck(b, tenv.addVars(ps zip pty))
-              }.reduce((lty, rty) => {mustSame(lty, rty); lty})
-          case _ => error("ematch")
-
+              mcases.map{ case MatchCase(name, params, body) =>
+                typeCheck(body, tenv.addVars(params zip variants(name).map(param => subst(param.ty, mapping))))
+              }reduce((lty, rty) => {mustSame(lty, rty); lty})
+          case _ => error()
       // exit
       case EExit(ty: Type, expr: Expr) =>
         mustValid(ty, tenv)
